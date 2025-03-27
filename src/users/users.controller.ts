@@ -8,9 +8,9 @@ export class UsersController {
 
   @Post(':id/debit')
   async debit(
-    @Param('id') id: number,
+    @Param('id') id: string,
     @Body() dto: CreateTransactionDto,
   ): Promise<void> {
-    await this.usersService.debit(id, dto);
+    await this.usersService.debit(Number(id), dto); 
   }
 }

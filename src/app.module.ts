@@ -8,11 +8,12 @@ import { UsersModule } from './users/users.module';
       type: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres',     // Пользователь БД
-      password: '5567',     // Пароль
-      database: 'shopdb',         // Название БД
-      autoLoadEntities: true,   // Автоматически подгружает сущности
-      synchronize: true,        // Синхронизация структуры таблиц
+      username: 'postgres',    
+      password: '5567',     
+      database: 'shopdb',         
+      autoLoadEntities: true,   
+      synchronize: true,  
+      logging: true,     
     }),
     UsersModule,
   ],

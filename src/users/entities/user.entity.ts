@@ -1,14 +1,10 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import { PaymentHistory } from './payment-history.entity';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+@Entity('users') 
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'numeric', precision: 12, scale: 2, default: 0 })
+  @Column({ type: 'numeric', precision: 12, scale: 2 })
   balance: number;
-
-  @OneToMany(() => PaymentHistory, (payment) => payment.user)
-  history: PaymentHistory[];
 }
