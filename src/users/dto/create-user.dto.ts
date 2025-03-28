@@ -1,8 +1,10 @@
 import { IsNotEmpty, IsNumber, IsPositive } from 'class-validator';
 
-export class CreateTransactionDto {
+export class CreateUserDto {
   @IsNotEmpty()
+  name: string;
+
   @IsNumber()
   @IsPositive()
-  amount: number;
+  balance: number;
 }
